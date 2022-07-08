@@ -122,9 +122,7 @@ try:
             3: "DELETE",
         }
         return switcher.get(argument, "INDICA un NÚMERO ENTRE 0-3")
-    
     print("-----------")
-    # argument=int(input("indique que opción quiere: \n 0-SELECT\n 1-INSERT\n 2-UPDATE\n 3-DELETE\n --elegiste: "))
 
     seguir = 'y'
     while seguir != ('n' or 'N'):
