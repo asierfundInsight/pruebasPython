@@ -105,8 +105,6 @@ def eliminarCiclo():
     cursor.execute(sql3)
 #________________________________________________________________________________
 
-
-
 try:
     #conexion BBDD
     conexion=psycopg2.connect(user='postgres',password='postgres',host='127.0.0.1',port='5432',database='postgres')
@@ -142,7 +140,6 @@ try:
             insertarNuevo()
             seguir=input("DESEA CONTINUAR ?-- INDIQUE Y/y para seguir o N/n para salir:  ")
             print("-----------")
-
 
         elif argument==2:
             print("-----------")
