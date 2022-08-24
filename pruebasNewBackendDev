@@ -1,0 +1,32 @@
+#importacion del modulo
+import psycopg2
+import pandas as pd
+import numpy as np
+
+#conexion BBDD
+conexion=psycopg2.connect(user='postgres',
+                          password='934m$b&QnCrk',
+                          host='db-v2-360fi-instance-1-cluster.cdv9yi5xuzxq.eu-west-3.rds.amazonaws.com',
+                          port='5432',
+                          database='emt_dev')
+# utilizar cursor
+cursor=conexion.cursor()
+
+# crear sentencia SQL
+#sql="Select * from public.clients_emt where client='test1';"
+
+sql="Select * from public.clients_emt;"
+
+
+# utiliza metodo execute
+cursor.execute(sql)
+
+# mostrar resultado
+registro=cursor.fetchall()
+
+for cliente in registro:
+    print(cliente)
+    
+# cerrar conexion
+cursor.close()
+conexion.close()
